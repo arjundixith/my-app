@@ -1,0 +1,18 @@
+<article>
+ 
+
+<div class="modal-body row">
+    <div class="col-md-6">
+      <h4>parent Component</h4>
+        <p>{{ counter }}</p>
+        <button class="btn btn-primary" (click)="increment()">increment</button>
+        <button class="btn btn-primary" (click)="decrement()">decrement</button>
+
+        <p>imported value from child {{childCounter}}</p>
+    </div>
+    <div class="col-md-6">
+        <app-dashboard-div2 [counter]="counter" (counterEmit) = "incDec($event)"   ></app-dashboard-div2>
+    </div>
+  </div>
+
+</article>
